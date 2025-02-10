@@ -12,7 +12,6 @@ body{
   color:#080808;
 }
 
-
 #header{
   font-size: 25px;
   font-weight: bold;
@@ -99,35 +98,50 @@ nav ul li a:hover::after {
 /* ------------------about------------------ */
 
 #about{
-  padding: 80px 0;
+  padding: 50px 20px;
   color:#080808;
 
 }
+
 .row{
   display:flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   
 }
-
-.aboutCol1{
-  flex-basis: 35%;
+.aboutCol2 {
+  padding: 20px;
 }
-.aboutCol1 img{
-  width: 100%;
-  border-radius: 15px;
-}
-.aboutCol2{
+.aboutCol1,
+.aboutCol2 {
   color:#080808;
-  flex-basis: 60%;
+  flex: 1;
+  min-width: 300px; /* Prevents elements from becoming too narrow */
+  text-align: center; /* Centers text on smaller screens */
 }
+
+.aboutCol1 img {
+  margin-top: 80px;
+  width: 100%;
+  max-width: 400px; /* Prevents image from getting too large */
+  height: auto;
+  border-radius: 10px;
+}
+
+
 .aboutCol2 p {
-  font-size: 20px; /* Increase size as needed */
+  font-size: 15px; /* Increase size as needed */
   line-height: 1.6; /* Improve readability */
   margin-top: 30px;
 }
 .aboutCol2 b {
   color: #096926; /* Adjust the shade of green as needed */
+}
+
+.aboutCol2 .sub-title {
+  font-size: 28px;
+  margin-bottom: 15px;
 }
 
 
@@ -183,6 +197,7 @@ nav ul li a:hover::after {
 }
 /* ----------portfolio------------- */
 #portfolio{
+  margin-top: 300px;
   padding: 50px 0;   
 }
 .project-list{
@@ -198,9 +213,12 @@ nav ul li a:hover::after {
 
 }
 .aboutCol3 p {
-  font-size: 20px; /* Increase size as needed */
+  font-size: 15px; /* Increase size as needed */
   line-height: 1.6; /* Improve readability */
   margin-top: 30px;
+}
+.aboutCol3 h1 {
+  margin-top: 60px;
 }
 .aboutCol3 b {
   color: #096926; /* Adjust the shade of green as needed */
@@ -300,7 +318,9 @@ h3::after {
 
 }
 /* ----------------------------------contact------------------------------------ */
-
+#contact{
+  margin-top: 150px;
+}
 .contact-left{
   flex-basis: 35%;
 }
@@ -308,7 +328,7 @@ h3::after {
   margin-top: 50px;
 }
 .contact-left h1{
-  margin-top: 250px;
+  margin-top: 150px;
   font-size: 60px;
 
 }
@@ -356,23 +376,55 @@ h3::after {
   color: #fff;
 }
 
+
+
+
+
+
 /* -------------css for small screen-------------- */
 nav .fas {
   display: none;
 }
+@media (max-width: 768px) {
+  #header {
+      background-size: contain; /* Try 'contain' instead of 'cover' */
+      min-height: 100vh;
+  }
+}
+
 
 @media only screen and (max-width: 600px) {
   #header {
-      background-image: url(Images/myprincess.png);
+      /* background-image: url(Images/myprincess.png); */
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
+      min-height: 100vh;
   }
+  .logo {
+    width: 150px; /* Default size */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  @media (max-width: 768px) {
+    .logo {
+      width: 200px; /* Increase size for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .logo {
+      width: 250px; /* Even larger for very small screens */
+    }
+  }
+  
 
   .header-text {
-      margin-top: 50vh;
+      margin-top: 2vh;
       font-size: 5vw;
-      color: white;    
+      font-style: italic;
+      
+      color: #06802a;    
   }
   .header-text h1 span{
       font-size: 8vw;
@@ -384,13 +436,60 @@ nav .fas {
       padding: 2vh;          
       width: 90vw;          
   }
+  #about h1 {
+    margin-top: 15;
+  }
+  @media (max-width: 600px) {
+    .projects:active img,
+    .projects:focus img {
+      transform: scale(1.1);
+    }
+  
+    .projects:active .layer,
+    .projects:focus .layer {
+      height: 100%;
+    }
+  
+    .btn:active,
+    .btn:focus {
+      background-color: #06802a;
+      color: #fff;
+    }
+  }
+  #contact {
+    font-size: 4vw;
+    margin-right: 20vw;
+    padding: 2vh;
+    width: 90vw;
+  }
+  /* Responsive adjustments */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .aboutCol1 {
+    display: none;
+  }
+
+  .aboutCol2 p {
+    font-size: 12px; /* Reduce text size slightly */
+    line-height: 1.5;
+  }
+}
 
   nav .fas {
       display: block;
       font-size: 5vw;         
   }
+  
+  
+  
+    
 
-  nav ul {
+   nav ul {
+    flex-direction: column;
+    display: flex;
       background: #06802a;
       position: fixed;
       top: 0;
@@ -400,7 +499,9 @@ nav .fas {
       padding-top: 10vh;      
       z-index: 2;
       transition: right 0.5s;
-  }
+      align-items: center;
+  } 
+
 
   nav ul li {
       display: block;
@@ -435,11 +536,6 @@ nav .fas {
       margin-right: 5vw;     
   }
 
-  .contact-left, .contact-right {
-      flex-basis: 100%;
-  }
-
-  .copyright {
-      font-size: 3vw;         
-  }
+  
+  
 }
