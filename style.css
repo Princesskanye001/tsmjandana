@@ -113,6 +113,11 @@ nav ul li a:hover::after {
 .aboutCol2 {
   padding: 20px;
 }
+.aboutCol2 h1{
+  white-space: nowrap;
+  font-size: 60px;
+  margin-right: 1300px;
+}
 .aboutCol1,
 .aboutCol2 {
   color:#080808;
@@ -484,6 +489,14 @@ nav .fas {
   }
   .contact-left h1{
     font-size: 30px;
+  }
+  
+  
+}
+@media (max-width: 768px){
+  .aboutCol2 h1{
+    font-size: 8vw;
+    margin-right:0;
   }
   
 }
