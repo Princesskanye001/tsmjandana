@@ -487,12 +487,28 @@ nav .fas {
   }
   
 }
-@media (max-width: 768px) { 
+@media (max-width: 768px) {
+  .contact-left {
+    flex-basis: 100%; /* Full width */
+    text-align: center; /* Center text */
+    margin-bottom: 20px;
+  }
+  
+  .contact-left h1 {
+    font-size: 8vw; /* Responsive font size */
+    margin-right: 0; /* Remove large margin */
+  }
+  
   .contact-left p {
-    font-size: 12px;
-    line-height: 1.5;
+    font-size: 4vw;
+    padding: 0 5%;
+  }
+  
+  .row {
+    flex-direction: column; /* Stack elements */
   }
 }
+
 
 
   nav .fas {
