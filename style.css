@@ -114,7 +114,7 @@ nav ul li a:hover::after {
   white-space: nowrap;
   font-size: 40px !important;
   margin-right: 1300px;
-  margin-top: 200px;
+  margin-top: 150px;
 }
 .aboutCol1,
 .aboutCol2 {
@@ -248,13 +248,13 @@ h3::after {
   font-size: 30px;
 }
 .projects img {
-  width: 450px;
+  width: 40%;
   border-radius: 10px;
   display: block;
   transition: transform 0.5s;
 }
 .layer {
-  width: 100%;
+  width: 40%;
   height: 0;
   background: linear-gradient(rgba(0, 0, 0, 0.6), #06802a);
   border-radius: 10px;
