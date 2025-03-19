@@ -248,13 +248,13 @@ h3::after {
   font-size: 30px;
 }
 .projects img {
-  width: 40%;
+  width: 80%;
   border-radius: 10px;
   display: block;
   transition: transform 0.5s;
 }
 .layer {
-  width: 40%;
+  width: 85%;
   height: 0;
   background: linear-gradient(rgba(0, 0, 0, 0.6), #06802a);
   border-radius: 10px;
