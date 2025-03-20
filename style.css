@@ -194,69 +194,52 @@ nav ul li a:hover::after {
   display: block;
 }
 /* ----------portfolio------------- */
+
 #portfolio {
-  margin-top: 300px;
-  padding: 50px 0;
+  margin-top: 150px; /* Reduce margin for better spacing on smaller screens */
+  padding: 50px 20px;
 }
+
+/* Responsive Grid Layout */
 .project-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(1px, 1fr));
-  grid-gap: 1px;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Ensure proper sizing */
+  gap: 15px; /* Increased gap for better spacing */
   margin-top: 50px;
+  justify-content: center;
 }
+
+/* Project Styling */
 .projects {
   border-radius: 10px;
   position: relative;
   overflow: hidden;
-}
-.aboutCol3 p {
-  font-size: 15px; /* Increase size as needed */
-  line-height: 1.6; /* Improve readability */
-  margin-top: 30px;
-}
-.aboutCol3 h1 {
-  margin-top: 30px;
-  font-size: 40px;
-}
-.aboutCol3 b {
-  color: #096926; /* Adjust the shade of green as needed */
-}
-h3 {
-  position: relative;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-h3::after {
-  content: "";
-  width: 100%;
-  height: 3px;
-  background: #ffffff; /* Customize color */
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-}
-
-.aboutCol4 p {
-  color: #fff;
-  font-size: 10px;
-}
-.aboutCol4 b {
-  color: #080808; /* Adjust the shade of green as needed */
-}
-.aboutCol4 h3 {
-  color: #fff;
-  font-size: 15px;
-}
+/* Image Styling */
 .projects img {
-  width: 80%;
-  height: 240px;
+  width: 100%;
+  height: auto; /* Allows images to scale properly */
+  max-height: 240px;
   object-fit: cover;
   border-radius: 10px;
-  display: block;
   transition: transform 0.5s;
 }
+
+/* Hover Effect */
+.projects:hover img {
+  transform: scale(1.05);
+}
+
+/* Overlay Layer */
 .layer {
-  width: 85%;
+  width: 100%;
   height: 0;
   background: linear-gradient(rgba(0, 0, 0, 0.6), #06802a);
   border-radius: 10px;
@@ -268,49 +251,106 @@ h3::after {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 0 40px;
+  padding: 0 20px;
   text-align: center;
   font-size: 14px;
   transition: height 0.5s;
 }
-.layer h3 {
-  font-weight: 500;
-  margin-bottom: 20px;
-}
-.layer a {
-  margin-top: 20px;
-  color: #0af751;
-  text-decoration: none;
-  font-size: 18px;
-  line-height: 60px;
-  background: #fff;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  text-align: center;
-}
-.projects:hover img {
-  transform: scale(1.1);
-}
+
+/* Layer Hover Effect */
 .projects:hover .layer {
   height: 100%;
 }
-.btn {
-  display: block;
-  margin: 50px auto;
-  width: fit-content;
-  border: 1px solid #06802a;
-  padding: 14px 50px;
-  border-radius: 6px;
-  text-decoration: none;
-  color: #fff;
-  background-color: transparent;
-  transition: background-color 0.5s, color 0.5s;
+
+/* Adjust heading & paragraph styling for small screens */
+.aboutCol3 h1 {
+  margin-top: 30px;
+  font-size: 35px; /* Reduced slightly for smaller screens */
+  text-align: center;
 }
-.btn:hover {
-  background-color: #06802a;
-  color: #fff;
+
+.aboutCol3 p {
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
 }
+
+/* Typography Adjustments */
+h3 {
+  font-size: 18px;
+  text-align: center;
+}
+
+h3::after {
+  content: "";
+  width: 50%;
+  height: 3px;
+  background: #ffffff;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -5px;
+}
+
+/* Button & Links */
+.layer a {
+  margin-top: 15px;
+  font-size: 16px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  #portfolio {
+    margin-top: 100px;
+    padding: 30px 10px;
+  }
+
+  .project-list {
+    grid-template-columns: 1fr; /* Full width images on smaller screens */
+  }
+
+  .projects img {
+    height: 200px; /* Adjust height to maintain balance */
+  }
+
+  .aboutCol3 h1 {
+    font-size: 28px;
+  }
+
+  .aboutCol3 p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects img {
+    height: 180px; /* Further adjust height for smaller devices */
+  }
+
+  .aboutCol3 h1 {
+    font-size: 24px;
+  }
+
+  .aboutCol3 p {
+    font-size: 12px;
+  }
+
+  .layer {
+    font-size: 12px;
+    padding: 0 10px;
+  }
+
+  .layer a {
+    font-size: 14px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
+}
+
 /* ----------------------------------contact------------------------------------ */
 #contact {
   margin-top: 150px;
