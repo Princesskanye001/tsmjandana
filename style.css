@@ -249,7 +249,7 @@ h3::after {
 }
 .projects img {
   width: 80%;
-  height: 200px;
+  height: 240px;
   object-fit: cover;
   border-radius: 10px;
   display: block;
