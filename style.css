@@ -272,6 +272,19 @@ nav ul li a:hover::after {
   line-height: 1.6;
   text-align: center;
 }
+.aboutCol3 b {
+  color: #096926;
+}
+.aboutCol4 p {
+  color: #fff;
+  font-size: 10px;
+}
+.aboutCol4 b {
+  color: #080808;
+}
+.aboutCol4 h3 {
+  text-decoration: underline;
+}
 
 /* Button & Links */
 .layer a {
