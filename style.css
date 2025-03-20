@@ -265,7 +265,10 @@ nav ul li a:hover::after {
   margin-top: 30px;
   font-size: 35px;
   text-align: center;
-  margin-right: 1100px;
+  white-space: nowrap; /* Prevents text from wrapping */
+  margin-right: auto; /* Remove the large right margin */
+  margin-left: auto; /* Center aligns */
+  display: block; /* Ensures full width if needed */
 }
 
 .aboutCol3 p {
