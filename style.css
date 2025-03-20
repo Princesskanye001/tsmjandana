@@ -284,6 +284,7 @@ nav ul li a:hover::after {
 }
 .aboutCol4 h3 {
   color: #fff;
+  font-size: 15px;
   text-decoration: underline;
 }
 
