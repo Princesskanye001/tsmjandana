@@ -626,3 +626,9 @@ nav .fas {
     margin: 0; /* Removes unwanted margin that may cause centering */
   }
 }
+
+@media (hover: hover) {
+  #click\ me {
+    display: none;
+  }
+}
