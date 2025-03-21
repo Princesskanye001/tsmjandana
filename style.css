@@ -195,7 +195,6 @@ nav ul li a:hover::after {
 }
 /* ----------portfolio------------- */
 
-/* ---------- Portfolio Section ---------- */
 #portfolio {
   margin-top: 150px; /* Reduce margin for better spacing */
   padding: 50px 20px;
@@ -575,8 +574,7 @@ nav .fas {
     top: 0;
     right: -50vw;
     width: 50vw;
-    height: 100vh;
-    padding-top: 10vh;
+    height: 35vh;
     z-index: 2;
     transition: right 0.5s;
     align-items: center;
@@ -584,12 +582,12 @@ nav .fas {
 
   nav ul li {
     display: block;
-    margin: 4vh;
+    margin: 2vh;
   }
 
   nav ul .fas {
     position: absolute;
-    top: 5vh;
+    top: 2vh;
     left: 5vw;
     cursor: pointer;
   }
